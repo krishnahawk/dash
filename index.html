@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>kBoard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <div class="container">
+            <header>
+                <h1>kBoard</h1>
+            </header>
+                <input type="hidden" id="set-time" value="30"/>
+                <div class="timer" id="timer">
+                    <p id="time" class="time">
+                    </p>
+                </div>
+                <div class="task">
+                    <p class="task-title" id="task-title" contenteditable="true">    
+                        Plan updated Sanctuary timeline
+                    </p>
+                    <!-- <p class="task-description" id="task-description" contenteditable="true">
+                        Optional task description/notes here.
+                    </p> -->
+                </div>
+                <div class="buttons">
+                    <a class="button" id="5button">5 minutes</a>
+                    <a class="button" id="10button">10 minutes</a>
+                    <a class="button" id="15button">15 minutes</a>
+                    <a class="button" id="20button">20 minutes</a>
+                    <a class="button" id="30button">30 minutes</a>
+                    </a>
+                </div>
+            </body>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="clock.js"></script>
+    </body>
+</html>
