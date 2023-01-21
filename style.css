@@ -113,7 +113,11 @@ div.task {
 div.task p.task-description {
     font-weight: 200;
     color: #A7A8BE;
+    opacity:.3;
     width:80%;
+    max-width:500px;
+    text-align: center;
+    margin:auto;
 }
 div.buttons {
     text-align:center;
