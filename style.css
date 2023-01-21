@@ -11,23 +11,7 @@ body {
     margin: 0;
     padding: 0;
 }
-@media screen and (max-width: 500px) {
-  body {
-    font-size: 8px;
-  }
-  .time, .hours, .minutes, seconds {
-    font-size:1.2rem;
-  }
-  p.time {
-    font-size: 3rem;
-  }
-  .buttons a {
-    font-size: 2rem;
-  }
-  .logo {
-    width: 80px;
-  }
-}
+
 @media screen and (max-width: 600px) {
     body {
         font-size:10px !important;
