@@ -15,7 +15,7 @@ body {
   body {
     font-size: 8px;
   }
-  .task .task-title {
+  .time, .hours, .minutes, seconds {
     font-size:1.2rem;
   }
   p.time {
