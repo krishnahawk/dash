@@ -21,46 +21,84 @@ setInterval(function () { getCountdown(); }, 1000);
 
 function getCountdown(){
 
-    $(document).keypress(function(e) {
-        if(e.which == 32) {
-            console.log('5 minutes');
-            minutes = 5;
-            target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
-            getCountdown();
-        }
-      });
+function startTimer(duration) {
+    if (!duration) {
+        minutes = 10;
+    }
+    minutes = duration;
+    target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
+    getCountdown();
+}
+$(document).keypress(function(e) {
+    if(e.which == 49) {
+        document.getElementById("10button").classList.add("lit");
+        document.getElementById("20button").classList.remove("lit");
+        document.getElementById("30button").classList.remove("lit");
+        document.getElementById("40button").classList.remove("lit");
+        document.getElementById("50button").classList.remove("lit");
+        startTimer(10);
+    }
+});
 
+$(document).keypress(function(e) {
+    if(e.which == 50) {
+        document.getElementById("10button").classList.remove("lit");
+        document.getElementById("20button").classList.add("lit");
+        document.getElementById("30button").classList.remove("lit");
+        document.getElementById("40button").classList.remove("lit");
+        document.getElementById("50button").classList.remove("lit");
+        startTimer(20);
+    }
+});
+
+$(document).keypress(function(e) {
+    if(e.which == 51) {
+        document.getElementById("10button").classList.remove("lit");
+        document.getElementById("20button").classList.remove("lit");
+        document.getElementById("30button").classList.add("lit");
+        document.getElementById("40button").classList.remove("lit");
+        document.getElementById("50button").classList.remove("lit");
+        startTimer(30);
+    }
+});
+
+$(document).keypress(function(e) {
+    if(e.which == 52) {
+        document.getElementById("10button").classList.remove("lit");
+        document.getElementById("20button").classList.remove("lit");
+        document.getElementById("30button").classList.remove("lit");
+        document.getElementById("40button").classList.add("lit");
+        document.getElementById("50button").classList.remove("lit");
+        startTimer(40);
+    }
+});
+
+$(document).keypress(function(e) {
+    if(e.which == 53) {
+        document.getElementById("10button").classList.remove("lit");
+        document.getElementById("20button").classList.remove("lit");
+        document.getElementById("30button").classList.remove("lit");
+        document.getElementById("40button").classList.remove("lit");
+        document.getElementById("50button").classList.add("lit");
+        startTimer(50);
+    }
+});
 
 // jquery click event
-$( '#5button' ).click( function() {
-    console.log('5 minutes');
-    minutes = 5;
-    target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
-    getCountdown();
-});
 $( '#10button' ).click( function() {
-    console.log('10 minutes');
-    minutes = 10;
-    target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
-    getCountdown();
-});
-$( '#15button' ).click( function() {
-    console.log('15 minutes');
-    minutes = 15;
-    target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
-    getCountdown();
+    startTimer(10);
 });
 $( '#20button' ).click( function() {
-    console.log('20 minutes');
-    minutes = 20;
-    target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
-    getCountdown();
+    startTimer(20);
 });
 $( '#30button' ).click( function() {
-    console.log('30 minutes');
-    minutes = 30;
-    target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
-    getCountdown();
+    startTimer(30);
+});
+$( '#40button' ).click( function() {
+    startTimer(40);
+});
+$( '#50button' ).click( function() {
+    startTimer(50);
 });
 
 	// find the amount of "seconds" between now and target

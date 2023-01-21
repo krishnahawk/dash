@@ -100,6 +100,7 @@ div.task {
     width:90%;
     margin: 0 auto;
     margin-bottom:5vh;
+    border-radius:10px;
     padding: 2% 5%;
 }
 .task .task-title {
@@ -133,10 +134,19 @@ a.button {
     border: 1px solid #A7A8BE;
     border-radius: 3px;
     color:#A7A8BE;
+    opacity:.2;
     display: inline-block;
     font-size: 1rem;
     font-weight: 700;
     padding: 0.5em 1em;
     text-decoration: none;
     text-transform: uppercase;
+}
+a.button:hover {
+    opacity:1;
+    transition:opacity 1s;
+}
+.lit {
+    opacity:1 !important;;
+    transition:opacity 1s;
 }
