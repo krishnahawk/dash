@@ -11,9 +11,39 @@ body {
     margin: 0;
     padding: 0;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size:10px !important;
+    }
+    .task .task-title {
+        font-size: 1.5rem !important;
+    }
+    div.timer p.time {
+        font-size: 10rem;
+    }
+    div.buttons a {
+        font-size:.5rem !important;
+    }
+}
+@media screen and (max-width: 850px) {
+    body {
+        font-size:14px !important;
+    }
+    .task .task-title {
+        font-size: 2rem !important;
+    }
+    div.timer p.time {
+        font-size: 15rem !important;
+    }
+    div.buttons a.button {
+        font-size:.9rem !important;
+    }
+}
 a {
     color:#A7A8BE;
     text-decoration: none;
+    cursor:pointer;
 }
 a:hover {
     color:#A7A8BE;
@@ -29,12 +59,25 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 1.5em 0;
 }
 div.container {
-    width:90%;
+    width:95%;
     margin:auto;
+    display:flex;
+    height:100vh;
+    flex-direction:column;
 }
 header {
     padding: 1em 0;
     text-align:center;
+}
+div.content {
+    display:flex;
+    flex:1;
+    align-items:center;
+    justify-content:center;
+    min-width:200px;
+}
+main {
+    width:100%;
 }
 div.timer {
     width:95%;
@@ -56,6 +99,7 @@ div.task {
     background:#0A0914;
     width:90%;
     margin: 0 auto;
+    margin-bottom:5vh;
     padding: 2% 5%;
 }
 .task .task-title {
@@ -75,7 +119,10 @@ div.buttons {
     text-align:center;
     width:95%;
     margin: 0 auto;
-    font-size:3rem;
+    display:flex;
+    align-items:center;
+    /* space evenly */
+    justify-content: space-evenly;
 }
 a.button {
     background:#0A0914;
@@ -85,7 +132,6 @@ a.button {
     display: inline-block;
     font-size: 1rem;
     font-weight: 700;
-    margin: 0 0 1.5em 0;
     padding: 0.5em 1em;
     text-decoration: none;
     text-transform: uppercase;

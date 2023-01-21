@@ -21,6 +21,16 @@ setInterval(function () { getCountdown(); }, 1000);
 
 function getCountdown(){
 
+    $(document).keypress(function(e) {
+        if(e.which == 32) {
+            console.log('5 minutes');
+            minutes = 5;
+            target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
+            getCountdown();
+        }
+      });
+
+
 // jquery click event
 $( '#5button' ).click( function() {
     console.log('5 minutes');
@@ -80,8 +90,6 @@ if ( seconds_left >= 0 ) {
 	countdown.innerHTML = display_hours + display_minutes + display_seconds; 
   
 }
-   
-  
   
 }
 
