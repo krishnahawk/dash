@@ -19,7 +19,7 @@ getCountdown();
 
 setInterval(function () { getCountdown(); }, 1000);
 
-function getCountdown(){
+function getCountdown(target_date){
 
     $(document).keypress(function(e) {
         if(e.which == 32) {
