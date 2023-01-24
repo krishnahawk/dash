@@ -22,7 +22,7 @@
                 </div>
                 <div class="task">
                     <p class="task-title" id="task-title" contenteditable="true">    
-                        Plan updated Sanctuary timeline
+                        
                     </p>
                     <p class="task-description" id="task-description" contenteditable="true">
                         Optional task description/notes here.
@@ -33,7 +33,7 @@
                     <a class="button" id="20button">20 min</a>
                     <a class="button" id="30button">30 min</a>
                     <a class="button" id="40button">40 min</a>
-                    <a class="button" id="52button">50 min</a>
+                    <a class="button" id="50button">50 min</a>
                     </a>
                 </div>
                 </main>
@@ -41,6 +41,11 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="clock.js"></script>
+        <script>
+            setTimeout(function(){
+   $( "#task-title" ).load( "task.html" );
+}, 2000); //refresh every 2 seconds
+        </script>
         <!-- <script src="api.js"></script> -->
     </body>
 </html>
