@@ -100,6 +100,7 @@ $( '#40button' ).click( function() {
 $( '#50button' ).click( function() {
     startTimer(50);
 });
+if ()
 
 	// find the amount of "seconds" between now and target
 	var current_date = new Date().getTime();
