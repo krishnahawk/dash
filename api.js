@@ -5,14 +5,15 @@ function fetchData() {
         })
         .then(data => {
             console.log(data);
-            const html = data.map(task => {
+            data.map(task => {
                 document.querySelector('#task-title').innerHTML = task.task_title;
                 document.querySelector('#task-description').innerHTML = task.task_description;
                 var minutes = task.timer_duration;
                 var target_date = new Date().getTime() + ((minutes * 60 ) * 1000); // set the countdown date
-                setInterval(function () { getCountdown(target_date); }, 1000);
+                getCountdown(target_date);
             })
         });
 }
-
-fetchData();
+window.addEventListener('load', function () {
+    setInterval(fetchData(), 10000);
+});
